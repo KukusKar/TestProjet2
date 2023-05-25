@@ -1,0 +1,33 @@
+﻿@model TripMeOn.Models.Products.Destination
+
+@{
+    Layout = "_MainLayout";
+    ViewBag.Title = "ModifyDestination";
+}
+
+    @using (Html.BeginForm())
+    {
+        <fieldset>
+            <legend>Modifier un séjour : </legend>
+            @Html.LabelFor(m => Model.Country)
+            @Html.TextBoxFor(m => Model.Country)
+            @Html.ValidationMessageFor(m => Model.Country)
+            <br />
+            @Html.LabelFor(m => Model.Region)
+            @Html.TextBoxFor(m => Model.Region)
+            @Html.ValidationMessageFor(m => Model.Region)
+            <br />
+            @Html.LabelFor(m => Model.City)
+            @Html.TextBoxFor(m => Model.City)
+            @Html.ValidationMessageFor(m => Model.City)
+            <br />
+            @Html.LabelFor(m => Model.Description)
+            @Html.TextBoxFor(m => Model.Description)
+            @Html.ValidationMessageFor(m => Model.Description)
+            <br />
+            <input type="submit" value="Modifier" />
+        </fieldset>
+    }
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>

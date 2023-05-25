@@ -1,0 +1,45 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/MainPage.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="entete">
+        <h2>Commencer à vogayer c'est dans la pointe de vos doigts...'</h2>
+    </div>
+
+    <div id="main">
+        <div id="menu">
+            <p>Gérer les produits</p>
+            <ul>
+                <li>@Html.ActionLink("Destinations", "ModifyDestination", "Destination", new { id = 1 }, null)</li>
+                <li>@Html.ActionLink("Themes", "ModifyThemes", "Theme")</li>
+                <li>@Html.ActionLink("Tour Packages", "ModifyTourPkg")</li>
+            </ul>
+            < br/>
+            <p>Gérer les services</p>
+            <ul>
+                <li>
+                <li>@Html.ActionLink("Hébergement", "MngAccomodation")</li>
+                <li>@Html.ActionLink("Transport", "MngTransports")</li>
+                <li>@Html.ActionLink("Restauration", "MngRestaurants")</li>
+            </ul>
+
+        </div>
+
+        <div id="contenu">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div id="footer">
+        &copy; @DateTime.Now.Year - N'hésitez pas à contacter notre Chicken Master florian@gmail.com
+    </div>
+</body>
+</html>
+

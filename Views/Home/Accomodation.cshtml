@@ -1,0 +1,25 @@
+﻿@model TripMeOn.ViewModels.DeuximeVue
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>Je suis la deuxième vue</div>
+    <ul>
+        <li>@Model.Message</li>
+        <li>@Model.Date.ToString("dd/MM/yyyy")</li>
+
+        <li>@Model.Accomodation.Name</li>
+        <li>@Model.Accomodation.Type</li>
+        <li>@Model.Accomodation.Price</li>
+       
+
+    </ul>
+
+</body>
+</html>
