@@ -8,8 +8,8 @@ namespace TripMeOn.Models.Products
 
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Le Pays doit être rempli.")]
         [MaxLength(25)]
+        [Required(ErrorMessage = "Le Pays doit être rempli, obviously")]
         public string Country { get; set; }
         
         public string Region { get; set; }
