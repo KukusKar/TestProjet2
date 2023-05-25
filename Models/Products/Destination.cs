@@ -14,7 +14,7 @@ namespace TripMeOn.Models.Products
         
         public string Region { get; set; }
         public string City { get; set; }
-        [Required (ErrorMessage = "La description doit être rempli.")]
+        [Required (ErrorMessage = "La description doit être rempli, oui, même si c'est con, c'est un test.")]
         public string Description { get; set; }
         public virtual ICollection<TourPackage> TourPackages { get; set; }
 
